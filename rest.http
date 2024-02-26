@@ -1,8 +1,31 @@
 ###post user
-post http://localhost:7000/api/v1/user
+get http://localhost:7000/api/v1/student/getall
+
+
+###post user
+post http://localhost:7000/api/v1/student/create
 Content-Type: application/json
 
 {
-    "id":"1",
-    "name":"mits"
+    "name":"MaANoj",
+    "roll_no":4,
+    "medium":"bangali",
+    "fees":1100,
+    "classes":7
 }
+
+###post user
+put http://localhost:7000/api/v1/student/update/1
+Content-Type: application/json
+
+{
+     "name":"Hari Poudel",
+    "roll_no":4,
+    "medium":"nepali",
+    "fees":1100,
+    "classes":7
+}
+
+
+###deleting the user
+DELETE http://localhost:7000/api/v1/student/delete/1
